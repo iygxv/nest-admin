@@ -1,8 +1,8 @@
-export function apiTempalte(options){
-    // console.log('options',options);
-    
-    const {BusinessName,moduleName,functionName,businessName,primaryKey} = options
-    return `
+export function apiTempalte(options) {
+  // console.log('options',options);
+
+  const { BusinessName, moduleName, functionName, businessName, primaryKey } = options;
+  return `
     import request from '@/utils/request'
     // 查询${functionName}列表
     export function list${BusinessName}(query) {
@@ -46,5 +46,5 @@ export function apiTempalte(options){
     })
     }
 
-    `
+    `;
 }

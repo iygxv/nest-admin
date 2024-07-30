@@ -1,7 +1,7 @@
-export const moduleTem = (options)=>{
-    const {BusinessName,businessName} = options
+export const moduleTem = (options) => {
+  const { BusinessName, businessName } = options;
 
-    return `
+  return `
     import { Module } from '@nestjs/common';
     import { ${BusinessName}Service } from './${businessName}.service';
     import { ${BusinessName}Controller } from './${businessName}.controller';
@@ -11,7 +11,5 @@ export const moduleTem = (options)=>{
       providers: [${BusinessName}Service],
     })
     export class ${BusinessName}Module {}
-    `
-}
-
-
+    `;
+};
